@@ -10021,3 +10021,8 @@ h3 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.buttonClass {
+  display: inline-block;
+  margin-right: 10px;
+}

@@ -15,19 +15,19 @@
             <label for="team">所属チーム</label>
             <select name="team_id" id="team">
                 @foreach ($teams as $team)
-                    <option value="{{ $team->team_id }}"
-                        @if ($team->team_id == $player->team_id selected else @endif>{{ $team->name }}
-                    </option>
+                    <option value="{{ $team->team_id }}" @if ($team->team_id == $player->team_id) selected else @endif>{{ $team->name }}</option>
                 @endforeach
             </select>
         </div>
         <div class="form-group">
             <label for="height">身長</label>
-            <input type="text" name="height" class="form-control col-md-6" value="{{ old('height', $player->height) }}" step="0.1">
+            <input type="text" name="height" class="form-control col-md-6" value="{{ old('height', $player->height) }}"
+                step="0.1">
         </div>
         <div class="form-group">
             <label for="weight">体重</label>
-            <input type="number" name="weight" class="form-control col-md-6" value="{{ old('weight', $player->weight) }}" step="0.1">
+            <input type="number" name="weight" class="form-control col-md-6" value="{{ old('weight', $player->weight) }}"
+                step="0.1">
         </div>
         <div class="form-group">
             <label for="age">年齢</label>
@@ -39,7 +39,8 @@
         </div>
         <div class="form-group">
             <label for="year_enrolled">所属年数</label>
-            <input type="number" name="year_enrolled" class="form-control col-md-6" value="{{ old('year_enrolled', $player->year_enrolled) }}">
+            <input type="number" name="year_enrolled" class="form-control col-md-6"
+                value="{{ old('year_enrolled', $player->year_enrolled) }}">
         </div>
         <input type="submit" value="更新" class="btn-info">
     </form>

@@ -39,6 +39,18 @@
             </tr>
         </tbody>
     </table>
-    <a href="{{ route('players.index') }}">戻る</a>
-    <button type="button" class="btn-secondary ml-2" onclick="location.href='{{ route('players.edit', $player) }}'">編集</button>
+    <div class="buttonClass">
+        <a href="{{ route('players.index') }}">戻る</a>
+    </div>
+    <div class="buttonClass">
+        <button type="button" class="btn-secondary"
+            onclick="location.href='{{ route('players.edit', $player) }}'">編集</button>
+    </div>
+    <div class="buttonClass">
+        <form action="{{ route('players.destroy', $player) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-warning" onclick="if(!confirm('本当に削除しますか？')){return false}">削除する</button>
+        </form>
+    </div>
 @endsection
