@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <th>年俸</th>
-                <td>{{ $player->salary }}</td>
+                <td>{{ $player->salary }}万円</td>
             </tr>
             <tr>
                 <th>所属年数</th>
@@ -40,4 +40,5 @@
         </tbody>
     </table>
     <a href="{{ route('players.index') }}">戻る</a>
+    <button type="button" class="btn-secondary ml-2" onclick="location.href='{{ route('players.edit', $player) }}'">編集</button>
 @endsection

@@ -27,7 +27,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('teams.create');
     }
 
     /**
@@ -38,7 +38,18 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $team = new Team();
+
+        $team->name = $request->name;
+        $team->company = $request->company;
+        $team->address = $request->address;
+        $team->budget = $request->budget;
+        $team->campion = 0;
+        $team->image = 'images/no_team.png';
+
+        $team->save();
+
+        return redirect()->route('teams.index');
     }
 
     /**
@@ -61,7 +72,7 @@ class TeamController extends Controller
      */
     public function edit(Team $team)
     {
-        //
+        return view('teams.edit', compact('team'));
     }
 
     /**
@@ -73,7 +84,15 @@ class TeamController extends Controller
      */
     public function update(Request $request, Team $team)
     {
-        //
+        $team->name = $request->name;
+        $team->company = $request->company;
+        $team->address = $request->address;
+        $team->budget = $request->budget;
+        $team->image = 'images/no_team.png';
+
+        $team->save();
+
+        return redirect()->route('teams.index');
     }
 
     /**

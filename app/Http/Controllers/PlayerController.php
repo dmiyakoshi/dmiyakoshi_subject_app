@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Player;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -26,7 +27,9 @@ class PlayerController extends Controller
      */
     public function create()
     {
-        //
+        $teams = Team::all();
+
+        return view('players.create', compact('teams'));
     }
 
     /**
@@ -37,7 +40,20 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $player = new Player();
+
+        $player->name = $request->name;
+        $player->team_id = $request->team_id;
+        $player->height = $request->height;
+        $player->weight = $request->weight;
+        $player->age = $request->age;
+        $player->salary = $request->salary;
+        $player->year_enrolled = $request->year_enrolled;
+        $player->team_id = $request->team_id;
+
+        $player->save();
+
+        return redirect()->route('players.index');
     }
 
     /**
@@ -59,7 +75,9 @@ class PlayerController extends Controller
      */
     public function edit(Player $player)
     {
-        //
+        $teams = Team::all();
+        
+        return view('players.edit', compact('player', 'teams'));
     }
 
     /**
@@ -71,7 +89,16 @@ class PlayerController extends Controller
      */
     public function update(Request $request, Player $player)
     {
-        //
+        $player->name = $request->name;
+        $player->team_id = $request->team_id;
+        $player->height = $request->height;
+        $player->weight = $request->weight;
+        $player->age = $request->age;
+        $player->salary = $request->salary;
+        $player->year_enrolled = $request->year_enrolled;
+        $player->team_id = $request->team_id;
+
+        return redirect()->route('players.index');
     }
 
     /**

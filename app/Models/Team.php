@@ -11,8 +11,8 @@ class Team extends Model
 
     protected $primaryKey = 'team_id';
 
-    // public function player()
-    // {
-    //     return $this->hasMany(\App\Models\Player::class);
-    // }
+    public function player()
+    {
+        return $this->hasMany(\App\Models\Player::class);
+    }
 }

@@ -37,4 +37,5 @@
         </table>
     </div>
     <a href="{{ route('teams.index') }}">戻る</a>
+    <button type="button" class="btn-secondary ml-2" onclick="location.href='{{ route('teams.edit', $team) }}'">編集</button>
 @endsection
