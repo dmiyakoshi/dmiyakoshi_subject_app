@@ -50,6 +50,7 @@ class PlayerController extends Controller
         $player->salary = $request->salary;
         $player->year_enrolled = $request->year_enrolled;
         $player->team_id = $request->team_id;
+        $player->image = 'images/no_image.png';
 
         $player->save();
 

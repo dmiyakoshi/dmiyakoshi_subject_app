@@ -37,8 +37,8 @@
         </table>
     </div>
     <h2 class="fontChange">所属選手</h2>
-    <div class="row">
-        @foreach ($players as $player)
+    @foreach ($players as $player)
+        <div class="row">
             <table class="table-bordered mb-5 mt-3 mr-3 col-md-4">
                 <div>
                     <img src="{{ url($player->image) }}" class="square-img5 mt-3">
@@ -73,8 +73,8 @@
                     </tr>
                 </tbody>
             </table>
-        @endforeach
-    </div>
+        </div>
+    @endforeach
 
     <div class="buttonClass">
         <a href="{{ route('teams.index') }}">戻る</a>
