@@ -3,7 +3,7 @@
 @section('title', 'チーム登録')
 
 @section('content')
-    <h1>チーム情報登録</h1>
+    <h1 class="fontChange">チーム情報登録</h1>
     <form action="{{ route('teams.store') }}" method="POST">
         @csrf
         <div class="form-group">

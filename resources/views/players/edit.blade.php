@@ -3,7 +3,7 @@
 @section('title', '選手編集')
 
 @section('content')
-    <h1>選手情報編集</h1>
+    <h1 class="fontChange">選手情報編集</h1>
     <form action="{{ route('players.update', $player) }}" method="POST">
         @csrf
         @method('PATCH')

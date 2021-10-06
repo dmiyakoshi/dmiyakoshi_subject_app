@@ -3,7 +3,7 @@
 @section('title', 'チーム編集')
 
 @section('content')
-    <h1>チーム情報編集</h1>
+    <h1 class="fontChange">チーム情報編集</h1>
     <form action="{{ route('teams.update', $team) }}" method="POST">
         @csrf
         @method('PATCH')

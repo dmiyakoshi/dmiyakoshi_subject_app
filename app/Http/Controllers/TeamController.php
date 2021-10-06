@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+use App\Models\Player;
 use Illuminate\Http\Request;
 use Illuminate\Support\ViewErrorBag;
 
@@ -60,8 +61,9 @@ class TeamController extends Controller
      */
     public function show(Team $team)
     {
-        //$team = Team::find($team->id)
-        return view('teams.show', compact('team'));
+        $players = Player::where('team_id', $team->team_id)->get();
+
+        return view('teams.show', compact('team', 'players'));
     }
 
     /**

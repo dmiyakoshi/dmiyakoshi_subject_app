@@ -3,7 +3,7 @@
 @section('title', '選手登録')
 
 @section('content')
-    <h1>選手情報登録</h1>
+    <h1 class="fontChange">選手情報登録</h1>
     <form action="{{ route('players.store') }}" method="POST">
         @csrf
         <div class="form-group">

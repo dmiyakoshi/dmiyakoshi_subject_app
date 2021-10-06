@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Rampart+One&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10025,4 +10026,29 @@ h3 {
 .buttonClass {
   display: inline-block;
   margin-right: 10px;
+}
+
+.fontChange {
+  font-family: "Palette Mosaic", cursive;
+  font-family: "Rampart One", cursive;
+}
+
+.square-img3 {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.square-img4 {
+  height: 86px;
+  width: 86px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.square-img5 {
+    height: 173px;
+    width: 173px;
+    object-fit: cover;
 }

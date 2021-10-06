@@ -3,7 +3,7 @@
 @section('title', 'チーム一覧')
 
 @section('content')
-    <h1>チーム一覧</h1>
+    <h1 class="fontChange">チーム一覧</h1>
     @foreach ($teams as $team)
         <div class="row mt-3 mb-5">
             <div>

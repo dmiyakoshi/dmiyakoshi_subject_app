@@ -3,9 +3,12 @@
 @section('title', '選手一覧')
 
 @section('content')
-    <h1>選手一覧</h1>
+    <h1 class="fontChange">選手一覧</h1>
     @foreach ($players as $player)
         <div class="row mt-3 mb-5">
+            <div>
+                <img src="{{ url($player->image) }}" class="square-img4">
+            </div>
             <li class="list-unstyled border col-md-6">
                 <a class="teamName" href="{{ route('players.show', $player->player_id) }}">{{ $player->name }}</a>
                 <p>所属チーム {{ $player->team->name }}</p>
