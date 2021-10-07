@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])->name('root');
+
+Route::resource('teams', App\Http\Controllers\TeamController::class);
+
+Route::resource('players', App\Http\Controllers\PlayerController::class);
+
+Route::resource('sponsers', App\Http\Controllers\SponserController::class);

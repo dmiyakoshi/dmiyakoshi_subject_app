@@ -1,0 +1,52 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Rampart+One&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.square-img{
+    height: 80px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.teamName {
+    font-size: large;
+}
+
+.square-img2 {
+    height: 146px;
+    width: 146px;
+    object-fit: cover;
+}
+
+.buttonClass {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.fontChange {
+    font-family: 'Palette Mosaic', cursive;
+    font-family: 'Rampart One', cursive;
+}
+
+.square-img3 {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.square-img4 {
+    height: 86px;
+    width: 86px;
+    object-fit: cover;
+}
+.square-img5 {
+    height: 173px;
+    width: 173px;
+    object-fit: cover;
+}
